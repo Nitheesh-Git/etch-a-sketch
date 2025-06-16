@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch mine</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js defer"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <p id="head">Etch a Sketch</p>
@@ -16,14 +16,16 @@
     <div class="controls">
         <div class="input">
             <label for="grids">Grids dimensions : </label>
-            <input type="number" id="pixels" min="1" placeholder="1-64">
+            <input class="size" type="number" id="pixels" min="1" max="64" placeholder="1-64">
             <button id="b1">Generate</button>
         </div>
         <div class="borders">
-            <label><input type="checkbox" id="toggle">Show borders</label>
+            <label><input class="border" type="checkbox" id="toggle">Show borders</label>
         </div>
         <div>
-            #######
+            <label for="colorPicker">Pick a color:</label>
+            <input type="color" id="colorPicker">
+            <button id="applyColorBtn">Apply Color</button>
         </div>
         <div class="last">
             <button id="random">Random mode</button>

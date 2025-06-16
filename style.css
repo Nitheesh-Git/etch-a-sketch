@@ -3,7 +3,7 @@
     src: url(Iceland-Regular.ttf);
 }
 body{
-    background-color: pink;
+    background-color: wheat;
     font-family: Iceland;
 }
 #head{
@@ -21,6 +21,7 @@ body{
 }
 .grids{
     display: flex;
+    flex-wrap: wrap;
     width: 550px;
     height: 550px;
     border: 2px solid black;
@@ -28,14 +29,16 @@ body{
 }
 .controls {
     display: flex;
+    background-color:burlywood;
     font-size: 38px;
     gap: 50px;
-    padding: 40px;
+    width: 550px;
+    height: 550px;
     flex-direction: column;
-    justify-content: top;
+    justify-content:center;
     align-items: center;
     align-content: center;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 10px;
 }
 #pixels{
@@ -51,6 +54,7 @@ body{
 }
 .last{
     display: flex;
+   
     flex-direction: column;
     gap: 30px;
 }
@@ -60,4 +64,13 @@ button{
     font-size: 28px;
     border-radius: 22px;
     padding: 9px;
+    cursor: pointer;
+}
+
+
+input:hover{
+    outline: 2px solid #ccc;
+}
+.cell{
+    box-sizing: border-box;
 }

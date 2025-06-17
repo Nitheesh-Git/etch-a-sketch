@@ -1,5 +1,6 @@
 const grids = document.querySelector(".grids");
 const containerSize = 600;
+let isRandom = false;
 
 function createGrid(gridsize = 36){
     for(let i=0;i<gridsize*gridsize;i++){
@@ -49,6 +50,7 @@ clear.addEventListener("click",()=>{
 let colorValue ="#000000"
 const color = document.getElementById("color")
 color.addEventListener("change",()=>{
+    isRandom = false;
     colorValue = color.value
     console.log(colorValue)
 })
@@ -59,7 +61,7 @@ grids.addEventListener("mouseover",(e)=>{
     }
 })
 
-let r,g,b,rc,max
+let r,g,b,max
 max=255
 
 function randomColor(){
@@ -70,12 +72,11 @@ function randomColor(){
     return `rgb(${r} , ${g} , ${b})`
 }
 
-rc = randomColor()
-
 const random = document.getElementById("random")
 random.addEventListener("click",()=>{
+    isRandom = true;
     grids.addEventListener("mouseover",(e)=>{
-        if(e.target.matches(".cell")){
+        if(isRandom && e.target.matches(".cell")){
             e.target.style.backgroundColor=randomColor()
         }   
     })

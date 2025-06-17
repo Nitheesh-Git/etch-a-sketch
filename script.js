@@ -47,7 +47,7 @@ clear.addEventListener("click",()=>{
 })
 
 let colorValue ="#000000"
-const color = document.getElementById("colorPicker")
+const color = document.getElementById("color")
 color.addEventListener("change",()=>{
     colorValue = color.value
     console.log(colorValue)
